@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MedCare – Usability Evaluation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <svg class="search-icon-overlay" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+      <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="Search topics, sections…" autocomplete="off"/>
+    <button class="search-close" id="searchClose" title="Close">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="search-results" id="searchResults">
+    <p class="search-hint">Type to search sections…</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <div class="nav-icon">
+      <img src="MC_logo.png" alt="MedCare Logo" width="30" height="30" style="object-fit:contain;border-radius:50%;"/>
+    </div>
+    <span class="nav-title">MedCare</span>
+  </div>
+
+  <!-- DESKTOP NAV LINKS -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#participant" class="nav-link">Participant Background</a></li>
+    <li><a href="#decide" class="nav-link">DECIDE Framework</a></li>
+    <li><a href="#tasks" class="nav-link">List of Tasks and Scenario</a></li>
+    <li><a href="#results" class="nav-link">Result of Usability Test</a></li>
+    <li><a href="#prototype" class="nav-link">Prototype Improvement</a></li>
+    <li class="nav-more-wrap">
+      <button class="nav-link nav-more-btn" id="moreBtn">
+        More
+        <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#about" class="dropdown-item">About the Study</a>
+        <a href="#methodology" class="dropdown-item">Methodology</a>
+        <a href="#team" class="dropdown-item">Team Members</a>
+        <a href="#references" class="dropdown-item">References</a>
+        <a href="#appendix" class="dropdown-item">Appendix</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="search-btn" id="searchBtn" title="Search">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="hamburger" id="hamburger" title="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mobile-link active">Home</a>
+  <a href="#participant" class="mobile-link">Participant Background</a>
+  <a href="#decide" class="mobile-link">DECIDE Framework</a>
+  <a href="#tasks" class="mobile-link">List of Tasks and Scenario</a>
+  <a href="#results" class="mobile-link">Result of Usability Test</a>
+  <a href="#prototype" class="mobile-link">Prototype Improvement</a>
+  <div class="mobile-divider"></div>
+  <p class="mobile-section-label">More</p>
+  <a href="#about" class="mobile-link">About the Study</a>
+  <a href="#methodology" class="mobile-link">Methodology</a>
+  <a href="#team" class="mobile-link">Team Members</a>
+  <a href="#references" class="mobile-link">References</a>
+  <a href="#appendix" class="mobile-link">Appendix</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<main id="home">
+
+  <!-- DECORATIVE BACKGROUND SHAPES -->
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-orb orb3"></div>
+
+  <div class="hero-title">
+    <div class="hero-badge">Usability Evaluation Report</div>
+    <h1>MedCare<br/><em>Patient Portal</em></h1>
+    <p class="hero-sub">A comprehensive usability evaluation conducted to improve the healthcare experience for all users.</p>
+  </div>
+
+  <section class="team-section" id="team">
+    <h2 class="team-heading">Our Team</h2>
+
+    <!-- Leader row -->
+    <div class="team-row leader-row">
+      <div class="member leader-member">
+        <div class="avatar leader-avatar">
+          <div class="avatar-inner">👨‍💻</div>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="member-name">Worawit Luewichana</div>
+        <div class="member-role leader-badge">Leader</div>
+      </div>
+    </div>
+
+    <!-- Members row -->
+    <div class="team-row members-row">
+      <div class="member">
+        <div class="avatar">
+          <div class="avatar-inner">👨‍💻</div>
+        </div>
+        <div class="member-name">Sarun Makarabhiromya</div>
+        <div class="member-role">Member</div>
+      </div>
+      <div class="member">
+        <div class="avatar">
+          <div class="avatar-inner">👩‍💻</div>
+        </div>
+        <div class="member-name">Kanyakorn Sasibutra</div>
+        <div class="member-role">Member</div>
+      </div>
+      <div class="member">
+        <div class="avatar">
+          <div class="avatar-inner">👨‍💻</div>
+        </div>
+        <div class="member-name">Supawat Perapatpong</div>
+        <div class="member-role">Member</div>
+      </div>
+      <div class="member">
+        <div class="avatar">
+          <div class="avatar-inner">👨‍💻</div>
+        </div>
+        <div class="member-name">Mamamo Green</div>
+        <div class="member-role">Member</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-label">Team Members</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Evaluation Sections</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">DECIDE</span>
+      <span class="stat-label">Framework Used</span>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="MC_logo.png" alt="MedCare Logo" width="28" height="28" style="object-fit:contain;opacity:0.45;border-radius:50%;"/>
+      <span class="footer-brand">MedCare System</span>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#decide">DECIDE</a>
+      <a href="#results">Results</a>
+      <a href="#team">Team</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-text">Established by <span class="footer-highlight">Mema</span> · Usability Evaluation Report</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
