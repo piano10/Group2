@@ -6,11 +6,10 @@ const navPages = [
   { title: "List of Tasks and Scenario", href: "#tasks", icon: "✅" },
   { title: "Result of Usability Test", href: "#results", icon: "📊" },
   { title: "Prototype Improvement", href: "#prototype", icon: "🔧" },
-  { title: "About the Study", href: "#about", icon: "📖" },
-  { title: "Methodology", href: "#methodology", icon: "🔬" },
-  { title: "Team Members", href: "#team", icon: "👨‍💻" },
-  { title: "References", href: "#references", icon: "📚" },
-  { title: "Appendix", href: "#appendix", icon: "📎" },
+  { title: "Reflections", href: "#reflections", icon: "💭" },
+  { title: "Additional Findings", href: "#additional-findings", icon: "🔍" },
+  { title: "Prototype Walkthrough", href: "#prototype-walkthrough", icon: "🖥️" },
+  { title: "Video Demonstration", href: "#video-demonstration", icon: "🎬" },
 ];
 
 // ── Elements ──
