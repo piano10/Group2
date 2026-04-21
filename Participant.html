@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Participant Background – MedCare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <svg class="search-icon-overlay" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+      <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="Search topics, sections…" autocomplete="off"/>
+    <button class="search-close" id="searchClose" title="Close">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="search-results" id="searchResults">
+    <p class="search-hint">Type to search sections…</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <div class="nav-icon">
+      <img src="MC_logo.png" alt="MedCare Logo" width="30" height="30" style="object-fit:contain;border-radius:50%;"/>
+    </div>
+    <span class="nav-title">MedCare</span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="Participant.html" class="nav-link active">Participant Background</a></li>
+    <li><a href="decide_framework.html" class="nav-link">DECIDE Framework</a></li>
+    <li><a href="index.html#tasks" class="nav-link">List of Tasks and Scenario</a></li>
+    <li><a href="results.html" class="nav-link">Result of Usability Test</a></li>
+    <li><a href="index.html#prototype" class="nav-link">Prototype Improvement</a></li>
+    <li class="nav-more-wrap">
+      <button class="nav-link nav-more-btn" id="moreBtn">
+        More
+        <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="reflect.html" class="dropdown-item">Reflections</a>
+        <a href="findings.html" class="dropdown-item">Additional Findings</a>
+        <a href="prototype.html" class="dropdown-item">Prototype Walkthrough</a>
+        <a href="videodemo.html" class="dropdown-item">Video Demonstration</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="search-btn" id="searchBtn" title="Search">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="hamburger" id="hamburger" title="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">Home</a>
+  <a href="Participant.html" class="mobile-link active">Participant Background</a>
+  <a href="decide_framework.html" class="mobile-link">DECIDE Framework</a>
+  <a href="task.html" class="mobile-link">List of Tasks and Scenario</a>
+  <a href="results.html" class="mobile-link">Result of Usability Test</a>
+  <a href="Improvement.html" class="mobile-link">Prototype Improvement</a>
+  <div class="mobile-divider"></div>
+  <p class="mobile-section-label">More</p>
+  <a href="reflect.html" class="mobile-link">Reflections</a>
+  <a href="findings.html" class="mobile-link">Additional Findings</a>
+  <a href="prototype.html" class="mobile-link">Prototype Walkthrough</a>
+  <a href="videodemo.html" class="mobile-link">Video Demonstration</a>
+</div>
+
+<!-- HERO -->
+<div class="participant-hero">
+  <div class="p-orb1"></div>
+  <div class="p-orb2"></div>
+  <div class="participant-hero-content">
+    <div class="participant-hero-badge">Usability Evaluation Report</div>
+    <h1>Participant <em>Background</em></h1>
+    <p>Meet the six participants who took part in the MedCare usability study — their backgrounds, experience levels, and profiles that shaped our evaluation.</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="participant-content">
+
+  <!-- Overview Stats -->
+  <div class="participant-card">
+    <div class="participant-card-header">
+      <div class="p-card-icon">📊</div>
+      <div>
+        <h2>Study Overview</h2>
+        <p class="p-card-subtitle">Key numbers at a glance</p>
+      </div>
+    </div>
+    <div class="p-stats-row">
+      <div class="p-stat-card">
+        <div class="p-stat-value">6</div>
+        <div class="p-stat-label">Total Participants</div>
+      </div>
+      <div class="p-stat-card">
+        <div class="p-stat-value">3</div>
+        <div class="p-stat-label">Tasks Per Session</div>
+      </div>
+      <div class="p-stat-card">
+        <div class="p-stat-value">PSU</div>
+        <div class="p-stat-label">Partido State Univ.</div>
+      </div>
+      <div class="p-stat-card">
+        <div class="p-stat-value">BSA</div>
+        <div class="p-stat-label">Degree Program</div>
+      </div>
+    </div>
+    <div class="p-card-divider"></div>
+    <div class="p-methodology">
+      <p>Our usability study involved six participants from the Partido State University community. By splitting the group between those familiar with digital reservations and those completely new to them, we gained a 360-degree view of the MedCare experience. All sessions were recorded on-site to capture authentic user behavior and environmental context.</p>
+    </div>
+  </div>
+
+  <!-- Participant Profiles -->
+  <div class="participant-card">
+    <div class="participant-card-header">
+      <div class="p-card-icon">👥</div>
+      <div>
+        <h2>Participant Profiles</h2>
+        <p class="p-card-subtitle">Individual backgrounds and digital experience</p>
+      </div>
+    </div>
+
+    <div class="p-grid">
+
+      <!-- P1 -->
+      <div class="p-member-card">
+        <div class="p-avatar">👩‍💻</div>
+        <span class="p-num">P1</span>
+        <div class="p-name">(Participant Name)</div>
+        <div class="p-demo">Female · 20 · 1st Year</div>
+        <div class="p-desc">Frequent user of fitness apps; comfortable with online shopping and digital platforms.</div>
+        <div class="p-tags">
+          <span class="p-tag">BSA</span>
+          <span class="p-tag">Tech-Savvy</span>
+          <span class="p-tag">Online Shopper</span>
+        </div>
+      </div>
+
+      <!-- P2 -->
+      <div class="p-member-card">
+        <div class="p-avatar">👨‍🎓</div>
+        <span class="p-num">P2</span>
+        <div class="p-name">(Participant Name)</div>
+        <div class="p-demo">Male · 19 · 1st Year</div>
+        <div class="p-desc">Rarely uses apps for health; prefers visiting physical pharmacies over digital alternatives.</div>
+        <div class="p-tags">
+          <span class="p-tag">BSA</span>
+          <span class="p-tag">Low Digital Use</span>
+          <span class="p-tag">Offline Pref.</span>
+        </div>
+      </div>
+
+      <!-- P3 -->
+      <div class="p-member-card">
+        <div class="p-avatar">👨‍💼</div>
+        <span class="p-num">P3</span>
+        <div class="p-name">(Participant Name)</div>
+        <div class="p-demo">Male · 19 · 1st Year</div>
+        <div class="p-desc">Regularly purchases vitamins and medicines online; experienced with e-commerce checkout flows.</div>
+        <div class="p-tags">
+          <span class="p-tag">BSA</span>
+          <span class="p-tag">Online Buyer</span>
+          <span class="p-tag">Health-Conscious</span>
+        </div>
+      </div>
+
+      <!-- P4 -->
+      <div class="p-member-card">
+        <div class="p-avatar">👩‍🏫</div>
+        <span class="p-num">P4</span>
+        <div class="p-name">(Participant Name)</div>
+        <div class="p-demo">Female · 22 · 4th Year</div>
+        <div class="p-desc">New to managing her own prescriptions; finds order tracking and status updates confusing.</div>
+        <div class="p-tags">
+          <span class="p-tag">BSA</span>
+          <span class="p-tag">Prescription Mgmt</span>
+          <span class="p-tag">Novice User</span>
+        </div>
+      </div>
+
+      <!-- P5 -->
+      <div class="p-member-card">
+        <div class="p-avatar">👩‍🔬</div>
+        <span class="p-num">P5</span>
+        <div class="p-name">(Participant Name)</div>
+        <div class="p-demo">Female · 20 · 2nd Year</div>
+        <div class="p-desc">Never used a pharmacy reservation system before; completely new to this type of application.</div>
+        <div class="p-tags">
+          <span class="p-tag">BSA</span>
+          <span class="p-tag">First-Time User</span>
+          <span class="p-tag">No Prior Exp.</span>
+        </div>
+      </div>
+
+      <!-- P6 -->
+      <div class="p-member-card">
+        <div class="p-avatar">👨‍💻</div>
+        <span class="p-num">P6</span>
+        <div class="p-name">(Participant Name)</div>
+        <div class="p-demo">Male · 21 · 2nd Year</div>
+        <div class="p-desc">Has used reservation systems via computer; prefers digital channels over going in person.</div>
+        <div class="p-tags">
+          <span class="p-tag">BSA</span>
+          <span class="p-tag">Digital Pref.</span>
+          <span class="p-tag">Prior Exp.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Selection Criteria -->
+  <div class="participant-card">
+    <div class="participant-card-header">
+      <div class="p-card-icon">📋</div>
+      <div>
+        <h2>Selection Criteria</h2>
+        <p class="p-card-subtitle">Why these participants were chosen</p>
+      </div>
+    </div>
+    <span class="p-section-label">Inclusion Requirements</span>
+    <ul class="p-criteria">
+      <li>Currently enrolled students at Partido State University — BS Accountancy program.</li>
+      <li>Diverse mix of tech experience levels: from first-time app users to regular digital shoppers.</li>
+      <li>Range of year levels (1st–4th year) to capture varying maturity in academic and digital exposure.</li>
+      <li>Balanced gender representation to account for any differences in interface perception.</li>
+      <li>At least one participant with prior experience using a reservation or pharmacy platform.</li>
+      <li>Willingness to participate voluntarily and complete the full session including the SUS questionnaire.</li>
+    </ul>
+    <div class="p-card-divider"></div>
+    <span class="p-section-label">Study Setting</span>
+    <div class="p-methodology">
+      <p>All sessions were conducted on-site at Partido State University. Participants interacted with the MedCare prototype on a device provided by the evaluation team while evaluators observed using a think-aloud protocol, recording task times, errors, and qualitative feedback without interference.</p>
+    </div>
+  </div>
+
+</div><!-- end participant-content -->
+
+<<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="MC_logo.png" alt="MedCare Logo" width="28" height="28" style="object-fit:contain;opacity:0.45;border-radius:50%;"/>
+      <span class="footer-brand">MedCare System</span>
+    </div>
+
+  </div>
+  <div class="footer-bottom" style="text-align:center;">
+    <p class="footer-text">Established by <span class="footer-highlight">MedCare</span> · Usability Evaluation Report</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
