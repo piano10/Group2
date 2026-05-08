@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consent Form, Respondents Information, Survey Instruments</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Times New Roman", serif;
+    }
+
+    body{
+      background:#f2f2f2;
+      padding:40px;
+    }
+
+    .container{
+      max-width:1300px;
+      margin:auto;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .title h1{
+      font-size:60px;
+      font-weight:bold;
+      line-height:1.2;
+    }
+
+    /* TOP CARDS */
+    .top-cards{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:35px;
+      margin-bottom:60px;
+    }
+
+    .card{
+      background:white;
+      border:1px solid #000;
+      border-radius:5px;
+      padding:25px;
+      text-align:center;
+      min-height:230px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .card h2{
+      font-size:34px;
+      margin-bottom:30px;
+    }
+
+    .card .value{
+      font-size:70px;
+      font-weight:bold;
+    }
+
+    .card .text-value{
+      font-size:52px;
+      font-weight:bold;
+    }
+
+    /* BOTTOM SECTION */
+    .bottom-section{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .info-box{
+      background:white;
+      border:1px solid #000;
+      border-radius:5px;
+      padding:30px;
+      min-height:330px;
+    }
+
+    .info-box h2{
+      text-align:center;
+      font-size:32px;
+      margin-bottom:35px;
+    }
+
+    /* PROFILE */
+    .profile-item{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:30px;
+      font-size:34px;
+      font-weight:bold;
+    }
+
+    /* PARAGRAPH */
+    .info-box p{
+      font-size:22px;
+      line-height:1.4;
+      text-align:justify;
+      font-family:Arial, sans-serif;
+    }
+
+    /* BUTTON */
+    .btn-container{
+      margin-top:30px;
+      text-align:center;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      background:#000;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+      font-size:20px;
+      transition:0.3s;
+      font-family:Arial, sans-serif;
+    }
+
+    .btn:hover{
+      background:#333;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1100px){
+      .top-cards{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .bottom-section{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:700px){
+      .top-cards{
+        grid-template-columns:1fr;
+      }
+
+      .title h1{
+        font-size:40px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- TITLE -->
+    <div class="title">
+      <h1>
+        Consent Form, Respondents Information,<br>
+        Survey Instruments
+      </h1>
+    </div>
+
+    <!-- TOP CARDS -->
+    <div class="top-cards">
+
+      <div class="card">
+        <h2>Respondents</h2>
+        <div class="value">40</div>
+      </div>
+
+      <div class="card">
+        <h2>SUS Rating</h2>
+        <div class="text-value">Marginal</div>
+      </div>
+
+      <div class="card">
+        <h2>Task Completion</h2>
+        <div class="value">90%</div>
+      </div>
+
+      <div class="card">
+        <h2>Mean SUS Score</h2>
+        <div class="value">57.25</div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM SECTION -->
+    <div class="bottom-section">
+
+      <!-- RESPONDENTS PROFILE -->
+      <div class="info-box">
+        <h2>Respondents Profile</h2>
+
+        <div class="profile-item">
+          <span>Male</span>
+          <span>12</span>
+        </div>
+
+        <div class="profile-item">
+          <span>Female</span>
+          <span>28</span>
+        </div>
+      </div>
+
+      <!-- INSTRUMENTS -->
+      <div class="info-box">
+        <h2>Instruments</h2>
+
+        <p>
+          The instrument used in this study consists of usability testing 
+          questions, System Usability Scale (SUS) statements, respondents 
+          profile, and questionnaires used to evaluate the effectiveness, 
+          accessibility, and usability of the proposed project.
+        </p>
+      </div>
+
+      <!-- CONSENT FORM -->
+      <div class="info-box">
+        <h2>Consent Form</h2>
+
+        <p>
+          Participants were informed about the objectives of the study, 
+          confidentiality of responses, and voluntary participation before 
+          proceeding with the usability testing and survey questionnaire.
+        </p>
+
+        <div class="btn-container">
+          <!-- CHANGE THE FILE NAME BELOW -->
+          <a href="Group5_Consent-form" target="_blank" class="btn">
+            View Consent Form
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
