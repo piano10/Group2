@@ -58,69 +58,180 @@ if (stepPills.length) {
 // Full index of every searchable section across all pages.
 // Each entry: { title, keywords, url }
 const SEARCH_INDEX = [
-  // ── index.html ────────────────────────────────────────
-  { title: 'Home – Overview',           keywords: 'home medcare usability evaluation report overview team members',  url: 'index.html' },
-  { title: 'Our Team',                  keywords: 'team members leader karl laurence piano jay ann mae peñaflor eldwin crissel george',  url: 'index.html#team' },
 
-  // ── Participant.html ──────────────────────────────────
-  { title: 'Participant Background',    keywords: 'participant background profiles bsa partido state university students',  url: 'Participant.html' },
-  { title: 'Study Overview',            keywords: 'study overview participants tasks sessions psu bsa',  url: 'Participant.html' },
-  { title: 'Participant Profiles',      keywords: 'participant profiles p1 p2 p3 p4 p5 p6 female male year level tech savvy',  url: 'Participant.html' },
-  { title: 'Selection Criteria',        keywords: 'selection criteria inclusion requirements study setting think aloud',  url: 'Participant.html' },
+  // ── index.html ─────────────────────────────────────────
+  { title: 'Home – MedCare Usability Evaluation',
+    keywords: 'home medcare usability evaluation report overview patient portal',
+    url: 'index.html' },
+  { title: 'Our Team',
+    keywords: 'team members leader karl laurence piano jay ann mae peñaflor eldwin joshua balacanao crissel perias george villareal exp lane member',
+    url: 'index.html#team' },
+  { title: 'Team Stats – 5 Members, DECIDE Framework',
+    keywords: '5 team members 6 evaluation sections decide framework stats',
+    url: 'index.html' },
 
-  // ── data_gathering.html ─────────────────────────────
-  { title: 'Data Gathering',          keywords: 'decide framework evaluation methodology overview',  url: 'data_gathering.html' },
-  { title: 'D – Determine the Goals',   keywords: 'determine goals medcare usability evaluation goals first-glance navigation',  url: 'data_gathering.html#step-d1' },
-  { title: 'E – Explore the Questions', keywords: 'explore questions background task-based questions prescription delivery tracking clicks',  url: 'data_gathering.html#step-e1' },
-  { title: 'C – Choose Methods',        keywords: 'choose methods moderated usability testing sus system usability scale questionnaire',  url: 'data_gathering.html#step-c' },
-  { title: 'I – Heuristic Evaluation',      keywords: 'identify practical issues heuristic evaluation nielsen visibility consistency error prevention flexibility',  url: 'data_gathering.html#step-i' },
-  { title: 'D – Decide on Ethical Issues', keywords: 'ethical issues informed consent form voluntary confidential signature',  url: 'data_gathering.html#step-d2' },
-  { title: 'E – Evaluate & Analyze Data',  keywords: 'evaluate analyze present data usability metrics targets time on task satisfaction score',  url: 'data_gathering.html#step-e2' },
+  // ── data_gathering.html ────────────────────────────────
+  { title: 'Data Gathering – DECIDE Framework',
+    keywords: 'decide framework evaluation methodology data gathering structured approach',
+    url: 'data_gathering.html' },
+  { title: 'D – Determine the Goals',
+    keywords: 'determine goals usability testing medcare efficiency reliable first-glance navigation accessibility pharmacy patients buyers',
+    url: 'data_gathering.html#step-d1' },
+  { title: 'E – Explore the Questions',
+    keywords: 'explore questions background demographic profile age gender course year level prior experience technology sus system usability scale i found the system easy complex',
+    url: 'data_gathering.html#step-e1' },
+  { title: 'C – Choose Evaluation Methods',
+    keywords: 'choose methods moderated usability testing partido state university bsa accountancy think-aloud protocol time errors verbal feedback sus questionnaire',
+    url: 'data_gathering.html#step-c' },
+  { title: 'I – Identify Practical Issues / Heuristic Evaluation',
+    keywords: 'identify practical issues heuristic evaluation karl piano jay ann peñaflor eldwin balacanao george villareal member report download pdf nielsen',
+    url: 'data_gathering.html#step-i' },
+  { title: 'D – Decide on Ethical Issues / Informed Consent',
+    keywords: 'ethical issues informed consent form voluntary confidential participation withdraw signature ordering medicine tracking orders pharmacy inventory 10-15 minutes',
+    url: 'data_gathering.html#step-d2' },
+  { title: 'E – Evaluate, Analyze & Present Data / Usability Metrics',
+    keywords: 'evaluate analyze present data usability metrics targets time on task log in create account google pharmacy shop browse buy payment cart message notifications profile edit language log out current target level',
+    url: 'data_gathering.html#step-e2' },
 
-  // ── task.html ─────────────────────────────────────────
-  { title: 'List of Tasks and Scenarios', keywords: 'tasks scenarios list usability test task scenario',  url: 'task.html' },
+  // ── task.html ──────────────────────────────────────────
+  { title: 'List of Tasks',
+    keywords: 'list of tasks scenarios usability evaluation complete set',
+    url: 'task.html' },
+  { title: 'Task – Log In',
+    keywords: 'log in login existing account forgot password create new account continue with google',
+    url: 'task.html' },
+  { title: 'Task – Homepage: Pharmacy',
+    keywords: 'homepage pharmacy locations check call pharmacy',
+    url: 'task.html' },
+  { title: 'Task – Homepage: Shop',
+    keywords: 'shop browse buy products proceed payment choose payment method cart delete increase quantity',
+    url: 'task.html' },
+  { title: 'Task – Message',
+    keywords: 'message view messages pharmacy conversation type send',
+    url: 'task.html' },
+  { title: 'Task – Notifications',
+    keywords: 'notifications check messages track status progress order',
+    url: 'task.html' },
+  { title: 'Task – Profile',
+    keywords: 'profile edit information change language settings payment methods log out account',
+    url: 'task.html' },
 
-  // ── results.html ──────────────────────────────────────
-  { title: 'Result of Usability Test',  keywords: 'results usability test decide framework application',  url: 'results.html' },
-  { title: 'Task 1 Results',            keywords: 'task 1 result success rate time to complete satisfaction complexity observations',  url: 'results.html' },
-  { title: 'Task 2 Results',            keywords: 'task 2 result success rate pain points challenges',  url: 'results.html' },
-  { title: 'Task 3 Results',            keywords: 'task 3 result success rate insights learnings',  url: 'results.html' },
-  { title: 'Average Usability Measurement', keywords: 'average usability measurement overall success rate average task time satisfaction score participants',  url: 'results.html' },
-  { title: 'Participant Results',       keywords: 'participant results individual data name age role task feedback',  url: 'results.html' },
-  { title: 'Feedback and Suggestions',  keywords: 'feedback suggestions participants quotes themes',  url: 'results.html' },
-  { title: 'Summarized Usability Test', keywords: 'summarize usability test findings conclusions recommended next steps high medium low priority',  url: 'results.html' },
+  // ── results.html ───────────────────────────────────────
+  { title: 'Results – Usability Test Overview',
+    keywords: 'results usability test 40 participants partido state university programs bsed bsa bacom bsbio bsba',
+    url: 'results.html' },
+  { title: 'DECIDE Framework Application',
+    keywords: 'decide framework application determine explore choose identify decide evaluate goals navigation satisfaction consent sus moderated testing',
+    url: 'results.html#decide' },
+  { title: 'Overall SUS Score',
+    keywords: 'sus score system usability scale 0 100 overall score 71.5 good usability benchmark 68',
+    url: 'results.html#sus-score' },
+  { title: 'SUS Questionnaire Results',
+    keywords: 'sus questionnaire q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 average rating strongly agree disagree complex easy confident cumbersome inconsistent integrated frequently learn',
+    url: 'results.html#sus-score' },
+  { title: 'Participant Results Table',
+    keywords: 'participant results p1 p2 p3 p4 p5 individual data gender program year prior experience tech usage sus score excellent good ok poor',
+    url: 'results.html' },
+  { title: 'Feedback and Suggestions from Participants',
+    keywords: 'feedback suggestions high ease of use navigation complex q3 easy q2 complex q7 learn quickly q4 technical support bsa bacom program variation',
+    url: 'results.html#feedback' },
+  { title: 'Summarize Usability Test',
+    keywords: 'summarize usability test mean sus 71.5 median 72.5 40 participants 8 programs good classification positive negative statements',
+    url: 'results.html#summary' },
+  { title: 'Recommended Next Steps – High Priority',
+    keywords: 'recommended next steps high priority simplify shop checkout flow onboarding guided tour tooltips first login new users',
+    url: 'results.html#summary' },
+  { title: 'Recommended Next Steps – Medium Priority',
+    keywords: 'medium priority navigation labels consistency system feedback confirmations success error messages purchasing profile',
+    url: 'results.html#summary' },
+  { title: 'Recommended Next Steps – Low Priority',
+    keywords: 'low priority mobile responsiveness smaller screens expand evaluation scope older users healthcare staff',
+    url: 'results.html#summary' },
 
-  // ── Improvement.html ──────────────────────────────────
-  { title: 'Prototype Improvement',     keywords: 'prototype improvement changes redesign updated version',  url: 'Improvement.html' },
+  // ── findings.html ──────────────────────────────────────
+  { title: 'Additional Findings',
+    keywords: 'additional findings key usability issues identified testing medcare patient portal',
+    url: 'findings.html' },
+  { title: 'Performance & Lagging Issues',
+    keywords: 'performance lagging lag slow system responsive smooth functions efficiency',
+    url: 'findings.html' },
+  { title: 'Need for Step-by-Step Instructions',
+    keywords: 'step by step instructions confusion unfamiliar users guide',
+    url: 'findings.html' },
+  { title: 'Tutorial for Older Users',
+    keywords: 'tutorial older users step by step process guided',
+    url: 'findings.html' },
+  { title: 'Overall Efficiency Improvement',
+    keywords: 'overall efficiency improvement performance expectations',
+    url: 'findings.html' },
+  { title: 'Prescription Validation Concern',
+    keywords: 'prescription validation doctor valid legitimate feature',
+    url: 'findings.html' },
+  { title: 'PIN/Password Security for Transactions',
+    keywords: 'pin password security transactions financial purchase verification account owner',
+    url: 'findings.html' },
+  { title: 'More Detailed Product Information',
+    keywords: 'product information health related informed decisions purchasing detailed',
+    url: 'findings.html' },
+  { title: 'Expand Product Variety in Shop',
+    keywords: 'expand product variety shop medicines water personal care kits diverse',
+    url: 'findings.html' },
+  { title: 'Add Local Products to the Shop',
+    keywords: 'local products shop foreign common area accessible relevant',
+    url: 'findings.html' },
+  { title: 'Minor Malfunctions Affecting Outcome',
+    keywords: 'minor malfunctions system outcome improving enhancing smoothly',
+    url: 'findings.html' },
+  { title: 'Lagging Causes Functional Failures',
+    keywords: 'lagging functional failures fix fully functional perform well',
+    url: 'findings.html' },
 
-  // ── findings.html ─────────────────────────────────────
-  { title: 'Additional Findings',       keywords: 'additional findings usability issues navigation slow task mobile responsiveness feedback confirmation',  url: 'findings.html' },
-  { title: 'Navigation Confusion',      keywords: 'navigation confusion unclear labels inconsistent menu placement',  url: 'findings.html' },
-  { title: 'Slow Task Completion',      keywords: 'slow task completion booking appointments inefficiencies',  url: 'findings.html' },
-  { title: 'Mobile Responsiveness Issues', keywords: 'mobile responsiveness smaller screens readability interaction',  url: 'findings.html' },
-  { title: 'Lack of Feedback',          keywords: 'lack of feedback confirmation messages uncertainty system feedback',  url: 'findings.html' },
+  // ── reflect.html ───────────────────────────────────────
+  { title: 'Reflections',
+    keywords: 'reflections team insights learnings medcare usability evaluation',
+    url: 'reflect.html' },
+  { title: 'What We Learned',
+    keywords: 'what we learned user-centered design healthcare interface issues task completion small interface problems',
+    url: 'reflect.html' },
+  { title: 'Team Collaboration',
+    keywords: 'team collaboration diverse perspectives unique ideas evaluation process final outcomes',
+    url: 'reflect.html' },
+  { title: 'Challenges Encountered',
+    keywords: 'challenges encountered usability issues categorized time constraints coordinating schedules',
+    url: 'reflect.html' },
+  { title: 'Future Improvements',
+    keywords: 'future improvements expand testing more participants refine prototype feedback enhance usability',
+    url: 'reflect.html' },
 
-  // ── reflect.html ──────────────────────────────────────
-  { title: 'Reflections',               keywords: 'reflections insights learnings team',  url: 'reflect.html' },
-  { title: 'What We Learned',           keywords: 'what we learned user-centered design healthcare interface issues task completion',  url: 'reflect.html' },
-  { title: 'Team Collaboration',        keywords: 'team collaboration diverse perspectives insights evaluation outcomes',  url: 'reflect.html' },
-  { title: 'Challenges Encountered',    keywords: 'challenges time constraints coordinating schedules usability issues categorized',  url: 'reflect.html' },
-  { title: 'Future Improvements',       keywords: 'future improvements expand testing more participants refine prototype',  url: 'reflect.html' },
+  // ── prototype.html ─────────────────────────────────────
+  { title: 'Prototype Walkthrough',
+    keywords: 'prototype walkthrough figma interactive design screens interactions open figma',
+    url: 'prototype.html' },
 
-  // ── prototype.html ────────────────────────────────────
-  { title: 'Prototype Walkthrough',     keywords: 'prototype walkthrough figma interactive design video',  url: 'prototype.html' },
+  // ── videodemo.html ─────────────────────────────────────
+  { title: 'Video Demonstration',
+    keywords: 'video demonstration medcare patient portal works improved usability features demo',
+    url: 'videodemo.html' },
 
-  // ── videodemo.html ────────────────────────────────────
-  { title: 'Video Demonstration',       keywords: 'video demonstration youtube medcare patient portal features',  url: 'videodemo.html' },
-
-  // ── documentation.html ───────────────────────────────────
-  { title: 'Documentation',             keywords: 'documentation project overview objectives tools materials team roles site structure references decide framework',  url: 'documentation.html' },
-  { title: 'Project Overview',          keywords: 'project overview medcare patient portal usability evaluation decide framework participants',  url: 'documentation.html' },
-  { title: 'Objectives',               keywords: 'objectives goals navigation task completion satisfaction pain points recommendations',  url: 'documentation.html' },
-  { title: 'Tools & Materials',         keywords: 'tools materials screen recording think aloud sus questionnaire figma html css javascript',  url: 'documentation.html' },
-  { title: 'Team Roles & Responsibilities', keywords: 'team roles responsibilities leader facilitator note-taker data analyst prototype designer report author',  url: 'documentation.html' },
-  { title: 'Website Structure',         keywords: 'website structure pages site map html files index data gathering task results reflect findings prototype video',  url: 'documentation.html' },
-  { title: 'References',               keywords: 'references preece rogers sharp nielsen brooke sus iso usability engineering interaction design',  url: 'documentation.html' },
+  // ── documentation.html ─────────────────────────────────
+  { title: 'Documentation',
+    keywords: 'documentation project comprehensive reference methodology tools team roles materials',
+    url: 'documentation.html' },
+  { title: 'Project Overview',
+    keywords: 'project overview medcare patient portal digital health appointments prescriptions messages pharmacy decide framework 40 students partido state university 2024 2025',
+    url: 'documentation.html' },
+  { title: 'Objectives',
+    keywords: 'objectives ease navigation first-glance clarity task completion time-on-task satisfaction pain points login shop messaging profile recommendations',
+    url: 'documentation.html' },
+  { title: 'Tools & Materials',
+    keywords: 'tools materials screen recording think-aloud sus questionnaire heuristic evaluation nielsen figma html css javascript google fonts youtube',
+    url: 'documentation.html' },
+  { title: 'Website Structure / Pages',
+    keywords: 'website structure pages index data gathering task results documentation reflections additional findings prototype walkthrough video demonstration site map',
+    url: 'documentation.html' },
+  { title: 'Survey Documentation Photos',
+    keywords: 'survey documentation photos pictures usability evaluation partido state university session',
+    url: 'documentation.html' },
 ];
 
 // ── DOM refs ──────────────────────────────────────────────
@@ -240,39 +351,42 @@ if (searchInput) {
   });
 }
 
-        const docPhotos = ['pic1.jpeg','pic2.jpeg','pic3.jpeg','pic4.jpeg','pic5.jpeg','pic6.jpeg','pic7.jpeg','pic8.jpeg','pic9.jpeg','pic10.jpeg','pic11.jpeg','pic12.jpeg','pic13.jpeg','pic14.jpeg','pic15.jpeg','pic16.jpeg'];
-        let docCurrentIndex = 0;
-        const lb = document.getElementById('docLightbox');
-        const lbImg = document.getElementById('docLightboxImg');
-        const lbCounter = document.getElementById('docLightboxCounter');
+// ── Documentation lightbox (only on documentation.html) ──
+const lb = document.getElementById('docLightbox');
+if (lb) {
+  const docPhotos = ['pic1.jpeg','pic2.jpeg','pic3.jpeg','pic4.jpeg','pic5.jpeg','pic6.jpeg','pic7.jpeg','pic8.jpeg','pic9.jpeg','pic10.jpeg','pic11.jpeg','pic12.jpeg','pic13.jpeg','pic14.jpeg','pic15.jpeg','pic16.jpeg'];
+  let docCurrentIndex = 0;
+  const lbImg     = document.getElementById('docLightboxImg');
+  const lbCounter = document.getElementById('docLightboxCounter');
 
-        function openLightbox(index) {
-          docCurrentIndex = index;
-          lbImg.src = docPhotos[docCurrentIndex];
-          lbCounter.textContent = (docCurrentIndex + 1) + ' / ' + docPhotos.length;
-          lb.style.display = 'flex';
-          document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-          lb.style.display = 'none';
-          document.body.style.overflow = '';
-        }
-        function prevPhoto() {
-          docCurrentIndex = (docCurrentIndex - 1 + docPhotos.length) % docPhotos.length;
-          lbImg.src = docPhotos[docCurrentIndex];
-          lbCounter.textContent = (docCurrentIndex + 1) + ' / ' + docPhotos.length;
-        }
-        function nextPhoto() {
-          docCurrentIndex = (docCurrentIndex + 1) % docPhotos.length;
-          lbImg.src = docPhotos[docCurrentIndex];
-          lbCounter.textContent = (docCurrentIndex + 1) + ' / ' + docPhotos.length;
-        }
-        lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
-        document.addEventListener('keydown', function(e){
-          if(lb.style.display === 'flex'){
-            if(e.key === 'ArrowRight') nextPhoto();
-            if(e.key === 'ArrowLeft') prevPhoto();
-            if(e.key === 'Escape') closeLightbox();
-          }
-        });
-    
+  window.openLightbox = function(index) {
+    docCurrentIndex = index;
+    lbImg.src = docPhotos[docCurrentIndex];
+    lbCounter.textContent = (docCurrentIndex + 1) + ' / ' + docPhotos.length;
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeLightbox = function() {
+    lb.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+  window.prevPhoto = function() {
+    docCurrentIndex = (docCurrentIndex - 1 + docPhotos.length) % docPhotos.length;
+    lbImg.src = docPhotos[docCurrentIndex];
+    lbCounter.textContent = (docCurrentIndex + 1) + ' / ' + docPhotos.length;
+  };
+  window.nextPhoto = function() {
+    docCurrentIndex = (docCurrentIndex + 1) % docPhotos.length;
+    lbImg.src = docPhotos[docCurrentIndex];
+    lbCounter.textContent = (docCurrentIndex + 1) + ' / ' + docPhotos.length;
+  };
+
+  lb.addEventListener('click', function(e) { if (e.target === lb) window.closeLightbox(); });
+  document.addEventListener('keydown', function(e) {
+    if (lb.style.display === 'flex') {
+      if (e.key === 'ArrowRight') window.nextPhoto();
+      if (e.key === 'ArrowLeft')  window.prevPhoto();
+      if (e.key === 'Escape')     window.closeLightbox();
+    }
+  });
+}
