@@ -89,6 +89,10 @@ nav {
   flex-wrap: nowrap;
 }
 
+.nav-links li {
+  list-style: none;
+}
+
 .nav-link {
   font-size: 0.78rem;
   font-weight: 500;
@@ -266,6 +270,8 @@ nav {
 }
 
 .mobile-link {
+  display: block;
+  list-style: none;
   font-size: 0.92rem;
   font-weight: 500;
   color: var(--white-60);
