@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Gathering – MedCare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <svg class="search-icon-overlay" viewBox="0 0 24 24" fill="none" width="20" height="20">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+      <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="Search topics, sections…" autocomplete="off"/>
+    <button class="search-close" id="searchClose" title="Close">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="search-results" id="searchResults">
+    <p class="search-hint">Type to search sections…</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <div class="nav-icon">
+      <img src="MC_logo.png" alt="MedCare Logo" width="30" height="30" style="object-fit:contain;border-radius:50%;"/>
+    </div>
+    <span class="nav-title">MedCare</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="data_gathering.html" class="nav-link active">Data Gathering</a></li>
+    <li><a href="task.html" class="nav-link">List of Tasks</a></li>
+    <li><a href="results.html" class="nav-link">Results</a></li>
+    <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+    <li class="nav-more-wrap">
+      <button class="nav-link nav-more-btn" id="moreBtn">
+        More
+        <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="reflect.html" class="dropdown-item">Reflections</a>
+        <a href="findings.html" class="dropdown-item">Additional Findings</a>
+        <a href="prototype.html" class="dropdown-item">Prototype Walkthrough</a>
+        <a href="videodemo.html" class="dropdown-item">Video Demonstration</a>
+      </div>
+    </li>
+  </ul>
+  <div class="nav-actions">
+    <button class="search-btn" id="searchBtn" title="Search">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="hamburger" id="hamburger" title="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">Home</a>
+  <a href="data_gathering.html" class="mobile-link active">Data Gathering</a>
+  <a href="index.html#tasks" class="mobile-link">List of Tasks</a>
+  <a href="results.html" class="mobile-link">Results</a>
+  <a href="documentation.html" class="mobile-link">Documentation</a>
+  <div class="mobile-divider"></div>
+  <p class="mobile-section-label">More</p>
+  <a href="reflect.html" class="mobile-link">Reflections</a>
+  <a href="findings.html" class="mobile-link">Additional Findings</a>
+  <a href="prototype.html" class="mobile-link">Prototype Walkthrough</a>
+  <a href="videodemo.html" class="mobile-link">Video Demonstration</a>
+</div>
+
+<!-- HERO -->
+<div class="decide-hero">
+  <div class="orb1"></div>
+  <div class="orb2"></div>
+  <div class="decide-hero-content">
+    <div class="decide-hero-badge">Evaluation Methodology</div>
+    <h1>DECIDE <em>Framework</em></h1>
+    <p>A structured approach to usability evaluation of the MedCare Patient Portal, ensuring user-centered design improvements.</p>
+  </div>
+</div>
+
+<!-- STEP PILLS -->
+<div class="decide-steps-nav">
+  <a href="#step-d1" class="step-pill active"><span class="step-pill-letter">D</span> Determine Goals</a>
+  <a href="#step-e1" class="step-pill"><span class="step-pill-letter">E</span> Explore Questions</a>
+  <a href="#step-c" class="step-pill"><span class="step-pill-letter">C</span> Choose Methods</a>
+  <a href="#step-i" class="step-pill"><span class="step-pill-letter">I</span> Heuristic Eval</a>
+  <a href="#step-d2" class="step-pill"><span class="step-pill-letter">D</span> Decide Ethics</a>
+  <a href="#step-e2" class="step-pill"><span class="step-pill-letter">E</span> Evaluate &amp; Analyze</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="decide-content">
+
+  <!-- D1 -->
+  <div class="decide-card" id="step-d1">
+    <div class="decide-card-header">
+      <div class="decide-letter-badge">D</div>
+      <div>
+        <h2>Determine the Goals</h2>
+        <p class="card-subtitle">Defining the purpose and scope of evaluation</p>
+      </div>
+    </div>
+    <span class="section-label">Introduction</span>
+    <p class="decide-text">
+      Usability testing for the improvement and optimization of the MedCare System, ensuring it remains an efficient and reliable tool for all users — regardless of technical proficiency.
+    </p>
+    <div class="card-divider"></div>
+    <span class="section-label">Evaluation Goals</span>
+    <ul class="decide-list">
+      <li>Examine the usability of MedCare from the perspective of patients, buyers, and users — both those who have used the system and those who haven't.</li>
+      <li>Evaluate the effectiveness of content presentation, specifically focusing on clarity of medical information and the purchasing workflow.</li>
+      <li>Focus on first-glance navigation and accessibility of pharmacy services.</li>
+    </ul>
+  </div>
+
+  <!-- E1 -->
+  <div class="decide-card" id="step-e1">
+    <div class="decide-card-header">
+      <div class="decide-letter-badge">E</div>
+      <div>
+        <h2>Explore the Questions</h2>
+        <p class="card-subtitle">Formulating questions to guide the evaluation</p>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="sub-card">
+        <h4>📋 Background Questions (Part II – Demographic Profile)</h4>
+        <ul class="decide-list">
+          <li>What is the participant's age, gender, course/program, and year level?</li>
+          <li>Does the participant have prior experience with a similar system?</li>
+          <li>How frequently does the participant use technology — daily, weekly, or never?</li>
+        </ul>
+      </div>
+      <div class="sub-card">
+        <h4>🎯 Usability & Open-Ended Questions (Part III & IV – SUS)</h4>
+        <ul class="decide-list">
+          <li>I think that I would like to use this system frequently.</li>
+          <li>I found the system unnecessarily complex.</li>
+          <li>I thought the system was easy to use.</li>
+          <li>I think that I would need the support of a technical person to use this system.</li>
+          <li>I found the various functions in this system were well integrated</li>
+          <li>I thought there was too much inconsistency in this system.</li>
+          <li>I would imagine that most people would learn to use this system very quickly.</li>
+          <li>I found the system very cumbersome to use.</li>
+          <li>I felt very confident using the system.</li>
+          <li>I needed to learn a lot of things before I could get going with this system.</li>
+          <li>What did you like about the system?</li>
+          <li>What improvements can you suggest?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div class="decide-card" id="step-c">
+    <div class="decide-card-header">
+      <div class="decide-letter-badge">C</div>
+      <div>
+        <h2>Choose Evaluation Approach &amp; Methods</h2>
+        <p class="card-subtitle">Planning how the evaluation will be conducted</p>
+      </div>
+    </div>
+    <p class="decide-text">
+      Prospective users were interviewed and observed at Partido State University, specifically students from the BS Accountancy program. Each participant performed real tasks using the MedCare prototype while evaluators recorded time, errors, and verbal feedback using a think-aloud protocol.
+    </p>
+    <div class="card-divider"></div>
+    <span class="section-label">Methods Used</span>
+    <div class="two-col">
+      <div class="sub-card">
+        <h4>🧪 Moderated Usability Testing</h4>
+        <p style="font-size:0.85rem;color:var(--white-60);line-height:1.65;">In-person sessions where participants performed defined tasks while evaluators observed and noted issues without interference.</p>
+      </div>
+      <div class="sub-card">
+        <h4>📊 System Usability Scale (SUS)</h4>
+        <p style="font-size:0.85rem;color:var(--white-60);line-height:1.65;">A 10-item post-task questionnaire administered after each session to measure perceived usability on a standardized scale.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- I -->
+  <div class="decide-card" id="step-i">
+    <div class="decide-card-header">
+      <div class="decide-letter-badge">I</div>
+      <div>
+        <h2>Identify the Practical Issues</h2>
+        <p class="card-subtitle">Participant profiles and evaluation logistics</p>
+      </div>
+    </div>
+    <span class="section-label">Team Member Reports</span>
+    <p class="decide-text">Each member of the group conducted an independent heuristic evaluation of the MedCare Patient Portal. Click the download button on each card to view their full report.</p>
+
+    <div class="heuristic-grid">
+
+      <div class="heuristic-card">
+        <div class="heuristic-icon">📄</div>
+        <div class="heuristic-info">
+          <h4>Member 1 – Karl Laurence Piano</h4>
+          <p class="heuristic-name">Heuristic Evaluation Report</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
+          <a href="Piano_Heuristic_Evaluation_Notification.pdf" target="_blank" class="heuristic-btn" style="background:rgba(90,171,255,0.20);border-color:rgba(90,171,255,0.45);">
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            View PDF
+          </a>
+          <a href="Piano_Heuristic_Evaluation_Notification.pdf" class="heuristic-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3v13m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="heuristic-card">
+        <div class="heuristic-icon">📄</div>
+        <div class="heuristic-info">
+          <h4>Member 2 – Jay Ann Mae Peñaflor</h4>
+          <p class="heuristic-name">Heuristic Evaluation Report</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
+          <a href="PEÑAFLOR_Heuristic_Evaluation_Workbook.pdf" target="_blank" class="heuristic-btn" style="background:rgba(90,171,255,0.20);border-color:rgba(90,171,255,0.45);">
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            View PDF
+          </a>
+          <a href="PEÑAFLOR_Heuristic_Evaluation_Workbook.pdf" class="heuristic-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3v13m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="heuristic-card">
+        <div class="heuristic-icon">📄</div>
+        <div class="heuristic-info">
+          <h4>Member 3 – Eldwin Joshua Balacanao</h4>
+          <p class="heuristic-name">Heuristic Evaluation Report</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
+          <a href="Balacanao_Heuristic_Evaluation_Workbook_HomePage.pdf" target="_blank" class="heuristic-btn" style="background:rgba(90,171,255,0.20);border-color:rgba(90,171,255,0.45);">
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            View PDF
+          </a>
+          <a href="Balacanao_Heuristic_Evaluation_Workbook_HomePage.pdf" class="heuristic-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3v13m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="heuristic-card">
+        <div class="heuristic-icon">📄</div>
+        <div class="heuristic-info">
+          <h4>Member 4 – George Villareal</h4>
+          <p class="heuristic-name">Heuristic Evaluation Report</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
+          <a href="Villareal_Heuristic_Evaluation_Workbook_Profile.pdf" target="_blank" class="heuristic-btn" style="background:rgba(90,171,255,0.20);border-color:rgba(90,171,255,0.45);">
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            View PDF
+          </a>
+          <a href="Villareal_Heuristic_Evaluation_Workbook_Profile.pdf" class="heuristic-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3v13m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="heuristic-card">
+        <div class="heuristic-icon">📄</div>
+        <div class="heuristic-info">
+          <h4>Member 5</h4>
+          <p class="heuristic-name">Heuristic Evaluation Report</p>
+        </div>
+        <a href="heuristic_member5.pdf" target="_blank" class="heuristic-btn" download>
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3v13m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Download PDF
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- D2 -->
+  <div class="decide-card" id="step-d2">
+    <div class="decide-card-header">
+      <div class="decide-letter-badge">D</div>
+      <div>
+        <h2>Decide on the Ethical Issues</h2>
+        <p class="card-subtitle">Informed consent and participant rights</p>
+      </div>
+    </div>
+    <p class="decide-text">
+      All participants reviewed and signed an informed consent form prior to participating. The form outlined the study purpose, voluntary nature of participation, and how collected data would be handled confidentially.
+    </p>
+    <div class="consent-grid">
+      <div class="consent-doc">
+        <h4>Informed Consent Form</h4>
+        <p>This study aims to evaluate the usability of the MedCare prototype system — developed to address healthcare barriers in rural areas, specifically difficulty accessing prescribed medicines.</p>
+        <br/>
+        <p>You are invited to interact with the prototype and perform tasks such as ordering medicine, tracking orders, and checking pharmacy inventory. Afterward, you will complete a 10-item SUS questionnaire. The session takes approximately 10–15 minutes.</p>
+        <br/>
+        <p>Participation is voluntary. You may withdraw at any time. All data is kept confidential and used solely to improve the system.</p>
+        <div class="sign-line">
+          <div class="sign-field"><span>Name</span><div class="line"></div></div>
+          <div class="sign-field"><span>Signature</span><div class="line"></div></div>
+          <div class="sign-field"><span>Date</span><div class="line"></div></div>
+        </div>
+      </div>
+      <div class="consent-photo">
+        <img src="consent.png" alt="Informed Consent Form" style="width:100%;border-radius:14px;border:1px solid rgba(255,255,255,0.10);box-shadow:0 8px 32px rgba(0,0,0,0.35);display:block;"/>
+        <p style="margin-top:10px;font-size:0.80rem;color:rgba(255,255,255,0.45);text-align:center;">Participants signed the consent form before testing began.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- E2 -->
+  <div class="decide-card" id="step-e2">
+    <div class="decide-card-header">
+      <div class="decide-letter-badge">E</div>
+      <div>
+        <h2>Evaluate, Analyze &amp; Present the Data</h2>
+        <p class="card-subtitle">Measuring usability attributes and interpreting results</p>
+      </div>
+    </div>
+    <span class="section-label">Usability Metrics &amp; Targets</span>
+    <div class="metrics-table-wrap">
+      <table class="metrics-table">
+        <thead>
+          <tr>
+            <th>Usability Attribute</th>
+            <th>Task / Instrument</th>
+            <th>Measurement</th>
+            <th>Current Level</th>
+            <th>Target Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Log In -->
+          <tr>
+            <td>Initial Performance</td><td>Log in with existing account / forgot password</td><td>Time on Task</td>
+            <td><span class="badge-current">2 minutes</span></td>
+            <td><span class="badge-target">45 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Create a new account</td><td>Time on Task</td>
+            <td><span class="badge-current">3 minutes</span></td>
+            <td><span class="badge-target">1 minute</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Continue with Google</td><td>Time on Task</td>
+            <td><span class="badge-current">30 secs</span></td>
+            <td><span class="badge-target">10 secs</span></td>
+          </tr>
+          <!-- Homepage – Pharmacy -->
+          <tr>
+            <td>Initial Performance</td><td>Check pharmacy locations</td><td>Time on Task</td>
+            <td><span class="badge-current">40 secs</span></td>
+            <td><span class="badge-target">15 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Call the pharmacy</td><td>Time on Task</td>
+            <td><span class="badge-current">20 secs</span></td>
+            <td><span class="badge-target">10 secs</span></td>
+          </tr>
+          <!-- Homepage – Shop -->
+          <tr>
+            <td>Initial Performance</td><td>Browse and buy products</td><td>Time on Task</td>
+            <td><span class="badge-current">3 minutes</span></td>
+            <td><span class="badge-target">1 minute</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Proceed to payment</td><td>Time on Task</td>
+            <td><span class="badge-current">1 minute</span></td>
+            <td><span class="badge-target">30 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Choose a payment method</td><td>Time on Task</td>
+            <td><span class="badge-current">40 secs</span></td>
+            <td><span class="badge-target">15 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Check cart — delete or adjust product quantity</td><td>Time on Task</td>
+            <td><span class="badge-current">50 secs</span></td>
+            <td><span class="badge-target">20 secs</span></td>
+          </tr>
+          <!-- Message -->
+          <tr>
+            <td>Initial Performance</td><td>View messages &amp; open Pharmacy conversation</td><td>Time on Task</td>
+            <td><span class="badge-current">30 secs</span></td>
+            <td><span class="badge-target">10 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Type and send a message</td><td>Time on Task</td>
+            <td><span class="badge-current">25 secs</span></td>
+            <td><span class="badge-target">10 secs</span></td>
+          </tr>
+          <!-- Notifications -->
+          <tr>
+            <td>Initial Performance</td><td>Check messages in notifications</td><td>Time on Task</td>
+            <td><span class="badge-current">20 secs</span></td>
+            <td><span class="badge-target">10 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Track the status and progress of an order</td><td>Time on Task</td>
+            <td><span class="badge-current">45 secs</span></td>
+            <td><span class="badge-target">15 secs</span></td>
+          </tr>
+          <!-- Profile -->
+          <tr>
+            <td>Initial Performance</td><td>Edit profile information</td><td>Time on Task</td>
+            <td><span class="badge-current">1 minute</span></td>
+            <td><span class="badge-target">30 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Change language settings</td><td>Time on Task</td>
+            <td><span class="badge-current">30 secs</span></td>
+            <td><span class="badge-target">10 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Check and manage payment methods</td><td>Time on Task</td>
+            <td><span class="badge-current">40 secs</span></td>
+            <td><span class="badge-target">15 secs</span></td>
+          </tr>
+          <tr>
+            <td>Initial Performance</td><td>Log out of the account</td><td>Time on Task</td>
+            <td><span class="badge-current">20 secs</span></td>
+            <td><span class="badge-target">5 secs</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="MC_logo.png" alt="MedCare Logo" width="28" height="28" style="object-fit:contain;opacity:0.45;border-radius:50%;"/>
+      <span class="footer-brand">MedCare System</span>
+    </div>
+
+  </div>
+  <div class="footer-bottom" style="text-align:center;">
+    <p class="footer-text">Established by <span class="footer-highlight">MedCare</span> · Usability Evaluation Report</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

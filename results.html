@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Result of Usability Test – MedCare</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <svg class="search-icon-overlay" viewBox="0 0 24 24" fill="none" width="20" height="20">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+      <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="Search topics, sections…" autocomplete="off"/>
+    <button class="search-close" id="searchClose" title="Close">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="search-results" id="searchResults">
+    <p class="search-hint">Type to search sections…</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <div class="nav-icon">
+      <img src="MC_logo.png" alt="MedCare Logo" width="30" height="30" style="object-fit:contain;border-radius:50%;"/>
+    </div>
+    <span class="nav-title">MedCare</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="data_gathering.html" class="nav-link">Data Gathering</a></li>
+    <li><a href="task.html" class="nav-link">List of Tasks</a></li>
+    <li><a href="results.html" class="nav-link active">Results</a></li>
+    <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+    <li class="nav-more-wrap">
+      <button class="nav-link nav-more-btn" id="moreBtn">
+        More
+        <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="reflect.html" class="dropdown-item">Reflections</a>
+        <a href="findings.html" class="dropdown-item">Additional Findings</a>
+        <a href="prototype.html" class="dropdown-item">Prototype Walkthrough</a>
+        <a href="videodemo.html" class="dropdown-item">Video Demonstration</a>
+      </div>
+    </li>
+  </ul>
+  <div class="nav-actions">
+    <button class="search-btn" id="searchBtn" title="Search">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="hamburger" id="hamburger" title="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">Home</a>
+  <a href="data_gathering.html" class="mobile-link">Data Gathering</a>
+  <a href="task.html" class="mobile-link">List of Tasks</a>
+  <a href="results.html" class="mobile-link active">Results</a>
+  <a href="documentation.html" class="mobile-link">Documentation</a>
+  <div class="mobile-divider"></div>
+  <p class="mobile-section-label">More</p>
+  <a href="reflect.html" class="mobile-link">Reflections</a>
+  <a href="findings.html" class="mobile-link">Additional Findings</a>
+  <a href="prototype.html" class="mobile-link">Prototype Walkthrough</a>
+  <a href="videodemo.html" class="mobile-link">Video Demonstration</a>
+</div>
+
+<!-- HERO -->
+<section class="results-hero">
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-orb orb3"></div>
+  <div class="results-hero-content">
+    <div class="hero-badge">Usability Results</div>
+    <h1>MedCare<br/><em>Patient Portal</em></h1>
+    <p>A comprehensive SUS-based usability evaluation conducted with 40 participants across multiple programs at Partido State University.</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main>
+<div class="sections-wrap">
+
+  <!-- ══ 1. DECIDE FRAMEWORK ══ -->
+  <section class="page-section" id="decide">
+    <h2 class="section-heading">DECIDE Framework Application</h2>
+    <p class="section-text">
+      The DECIDE framework was applied as the structured methodology for this usability evaluation of the MedCare Patient Portal.
+      <strong style="color:#fff;">D</strong> — We determined the goals: to assess first-glance usability, navigation clarity, and overall user satisfaction.
+      <strong style="color:#fff;">E</strong> — We explored background and task-based questions covering prescription tracking, delivery monitoring, and key portal interactions.
+      <strong style="color:#fff;">C</strong> — We chose moderated usability testing combined with the System Usability Scale (SUS) questionnaire as our primary methods.
+      <strong style="color:#fff;">I</strong> — We identified practical issues including participant recruitment, logistics, and scheduling across programs.
+      <strong style="color:#fff;">D</strong> — We decided on ethical issues by securing informed consent forms signed voluntarily by all participants, ensuring confidentiality.
+      <strong style="color:#fff;">E</strong> — We evaluated and analyzed data against usability targets, computing SUS scores, task metrics, and satisfaction ratings for each participant.
+    </p>
+  </section>
+
+  <!-- ══ 2. OVERALL SUS SCORE ══ -->
+  <section class="page-section" id="sus-score">
+    <h2 class="section-heading">Overall SUS Score</h2>
+    <p class="section-text">
+      The System Usability Scale (SUS) is a reliable, 10-item questionnaire producing a score from 0–100.
+      Scores above <strong style="color:#fff;">68</strong> are considered above average usability. The MedCare Patient Portal achieved a mean SUS score of <strong style="color:rgba(90,171,255,0.95);">71.5</strong> out of 100, placing it in the <em>Good</em> usability band.
+    </p>
+
+    <div class="sus-gauge-wrap">
+      <div class="sus-circle">
+        <div class="sus-circle-inner">
+          <span class="sus-score-num">71.5</span>
+          <span class="sus-score-lbl">SUS Score</span>
+        </div>
+      </div>
+      <div class="sus-legend">
+        <p>Mean score across <strong style="color:#fff;">36 valid responses</strong> (40 participants, 4 partial). Median: <strong style="color:#fff;">72.5</strong> · Std Dev: <strong style="color:#fff;">12.0</strong> · Range: 42.5 – 95.0.</p>
+        <span class="sus-grade">Grade: C+ · Adjective: Good · Acceptability: Marginal–High</span>
+      </div>
+    </div>
+
+    <!-- Per-question bars -->
+    <p style="margin-top:24px;margin-bottom:4px;font-size:0.85rem;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">Per-Question Average Ratings (1–5)</p>
+    <div class="q-bars">
+      <!-- Odd = positive statements, Even = negative statements -->
+      <div class="q-bar-row">
+        <span class="q-label">Q1 (Pos)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill pos" style="width:84%"></div></div>
+        <span class="q-val">4.22</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q2 (Neg)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill neg" style="width:58%"></div></div>
+        <span class="q-val">2.90</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q3 (Pos)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill pos" style="width:90%"></div></div>
+        <span class="q-val">4.49</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q4 (Neg)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill neg" style="width:50%"></div></div>
+        <span class="q-val">2.52</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q5 (Pos)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill pos" style="width:86%"></div></div>
+        <span class="q-val">4.30</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q6 (Neg)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill neg" style="width:49%"></div></div>
+        <span class="q-val">2.45</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q7 (Pos)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill pos" style="width:87%"></div></div>
+        <span class="q-val">4.36</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q8 (Neg)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill neg" style="width:48%"></div></div>
+        <span class="q-val">2.38</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q9 (Pos)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill pos" style="width:86%"></div></div>
+        <span class="q-val">4.28</span>
+      </div>
+      <div class="q-bar-row">
+        <span class="q-label">Q10 (Neg)</span>
+        <div class="q-bar-bg"><div class="q-bar-fill neg" style="width:59%"></div></div>
+        <span class="q-val">2.95</span>
+      </div>
+    </div>
+    <p style="font-size:0.78rem;color:rgba(255,255,255,0.38);margin-top:10px;">Positive items (Q1,Q3,Q5,Q7,Q9): higher = better. Negative items (Q2,Q4,Q6,Q8,Q10): lower = better.</p>
+  </section>
+
+  <!-- ══ 3. TASK 1 ══ -->
+  <section class="page-section" id="task1">
+    <h2 class="section-heading">Usability Test Result — Task 1: Log In & Account Setup</h2>
+    <p class="section-text">
+      Participants were asked to log into the MedCare Patient Portal using one of three methods: using an existing account (with or without forgotten password), creating a new account, or continuing with Google.
+    </p>
+    <div class="content-grid">
+      <div class="content-card">
+        <h3>🔐 Task Description</h3>
+        <p>Log in or create an account. Options included: recovering a forgotten password, registering a new account, and OAuth via Google sign-in.</p>
+      </div>
+      <div class="content-card">
+        <h3>👥 Participants</h3>
+        <p><strong style="color:#fff;">40 total</strong> — 28 Female, 12 Male. Mostly 1st year (28) and 2nd year (10) students across 8 programs.</p>
+      </div>
+      <div class="content-card">
+        <h3>🔍 Key Observations</h3>
+        <p>Most participants found the Google sign-in option the quickest. Some new users were unsure which option to choose first, indicating a need for clearer onboarding cues.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 4. TASK 2 ══ -->
+  <section class="page-section" id="task2">
+    <h2 class="section-heading">Usability Test Result — Task 2: Homepage & Shop Navigation</h2>
+    <p class="section-text">
+      Participants navigated the homepage to explore pharmacy locations, browse and purchase products through the shop, manage the cart, and proceed through the payment flow.
+    </p>
+    <div class="content-grid">
+      <div class="content-card">
+        <h3>🏠 Subtasks Covered</h3>
+        <p>Check pharmacy locations · Call the pharmacy · Browse &amp; buy products · Proceed to payment · Choose payment method · Manage cart (delete / adjust quantity).</p>
+      </div>
+      <div class="content-card">
+        <h3>📊 SUS Insight</h3>
+        <p>Q3 (I found the system easy to use) had the highest average rating of <strong style="color:#fff;">4.49 / 5</strong>, indicating strong ease-of-use perception during navigation tasks.</p>
+      </div>
+      <div class="content-card">
+        <h3>⚠️ Pain Points</h3>
+        <p>Q2 (unnecessary complexity) averaged <strong style="color:#fff;">2.90</strong> and Q10 (need to learn things) averaged <strong style="color:#fff;">2.95</strong>, pointing to a moderate learning curve in the shop flow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 5. TASK 3 ══ -->
+  <section class="page-section" id="task3">
+    <h2 class="section-heading">Usability Test Result — Task 3: Messaging, Notifications & Profile</h2>
+    <p class="section-text">
+      Participants used the messaging feature to converse with the pharmacy, checked notifications to track order status, and managed their profile — including editing info, changing language, managing payment methods, and logging out.
+    </p>
+    <div class="content-grid">
+      <div class="content-card">
+        <h3>💬 Messaging & Notifications</h3>
+        <p>View messages · Open pharmacy conversation · Send a message · Check notifications · Track order status and progress.</p>
+      </div>
+      <div class="content-card">
+        <h3>👤 Profile Management</h3>
+        <p>Edit profile information · Change language settings · Manage payment methods · Log out of account.</p>
+      </div>
+      <div class="content-card">
+        <h3>💡 Key Insights</h3>
+        <p>Q6 (inconsistency) and Q8 (cumbersome to use) had the lowest negative-item averages (2.45 and 2.38), showing the interface is perceived as consistent and relatively fluid in profile interactions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 6. AVERAGE METRICS ══ -->
+  <section class="page-section" id="avg-metrics">
+    <h2 class="section-heading">Average Usability Test Measurement</h2>
+    <p class="section-text">
+      Aggregated metrics across all 40 participants and 36 valid SUS responses. The portal scores above the SUS industry average of 68, reflecting generally positive usability while highlighting specific areas for improvement.
+    </p>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">71.5</div>
+        <div class="metric-label">Mean SUS Score (/100)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">72.5</div>
+        <div class="metric-label">Median SUS Score</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">95.0</div>
+        <div class="metric-label">Highest SUS Score</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">40</div>
+        <div class="metric-label">Total Participants</div>
+      </div>
+    </div>
+
+    <!-- Participant demographics -->
+    <div class="dist-grid" style="margin-top:24px;">
+      <div class="dist-card">
+        <h4>Gender Distribution</h4>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">Female</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:70%"></div></div>
+          <span class="dist-cnt">28</span>
+        </div>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">Male</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:30%"></div></div>
+          <span class="dist-cnt">12</span>
+        </div>
+      </div>
+      <div class="dist-card">
+        <h4>Year Level</h4>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">1st Year</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:70%"></div></div>
+          <span class="dist-cnt">28</span>
+        </div>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">2nd Year</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:25%"></div></div>
+          <span class="dist-cnt">10</span>
+        </div>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">3rd Year</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:5%"></div></div>
+          <span class="dist-cnt">2</span>
+        </div>
+      </div>
+      <div class="dist-card">
+        <h4>Prior Similar System Experience</h4>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">Yes</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:50%"></div></div>
+          <span class="dist-cnt">20</span>
+        </div>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">No</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:45%"></div></div>
+          <span class="dist-cnt">18</span>
+        </div>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">N/A</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:5%"></div></div>
+          <span class="dist-cnt">2</span>
+        </div>
+      </div>
+      <div class="dist-card">
+        <h4>Frequency of Tech Use</h4>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">Daily</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:65%"></div></div>
+          <span class="dist-cnt">26</span>
+        </div>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">Weekly</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:12.5%"></div></div>
+          <span class="dist-cnt">5</span>
+        </div>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">Never</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:17.5%"></div></div>
+          <span class="dist-cnt">7</span>
+        </div>
+        <div class="dist-bar-row">
+          <span class="dist-lbl">N/A</span>
+          <div class="dist-bg"><div class="dist-fill" style="width:5%"></div></div>
+          <span class="dist-cnt">2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 7. PARTICIPANT RESULTS TABLE ══ -->
+  <section class="page-section" id="participant-results">
+    <h2 class="section-heading">Participant Results</h2>
+    <p class="section-text">
+      Individual SUS scores for all 40 participants. SUS = (sum of odd-item scores − 5 + sum of (25 − even-item scores)) × 2.5.
+      Scores ≥ 85 = Excellent, 71–84 = Good, 51–70 = OK, ≤ 50 = Poor.
+    </p>
+    <div class="ptable-wrap">
+      <table class="ptable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Gender</th>
+            <th>Program</th>
+            <th>Year</th>
+            <th>Prior Exp.</th>
+            <th>Tech Use</th>
+            <th>SUS Score</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P1</td><td>F</td><td>BSED</td><td>1st</td><td>Yes</td><td>Weekly</td><td>—</td><td>—</td></tr>
+          <tr><td>P2</td><td>F</td><td>BSED</td><td>1st</td><td>No</td><td>Daily</td><td>95.0</td><td><span class="sus-pill a">Excellent</span></td></tr>
+          <tr><td>P3</td><td>F</td><td>BSED Math</td><td>2nd</td><td>—</td><td>—</td><td>70.0</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P4</td><td>F</td><td>BSED Math</td><td>2nd</td><td>Yes</td><td>Weekly</td><td>70.0</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P5</td><td>F</td><td>BSED Math</td><td>2nd</td><td>Yes</td><td>Weekly</td><td>72.5</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P6</td><td>F</td><td>BSED Math</td><td>2nd</td><td>No</td><td>—</td><td>80.0</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P7</td><td>M</td><td>BSED Math</td><td>2nd</td><td>No</td><td>Daily</td><td>—</td><td>—</td></tr>
+          <tr><td>P8</td><td>M</td><td>BSED ValEd</td><td>2nd</td><td>Yes</td><td>Daily</td><td>85.0</td><td><span class="sus-pill a">Excellent</span></td></tr>
+          <tr><td>P9</td><td>F</td><td>BSED SS</td><td>1st</td><td>Yes</td><td>Daily</td><td>62.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P10</td><td>F</td><td>BSED SS</td><td>2nd</td><td>Yes</td><td>Daily</td><td>82.5</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P11</td><td>M</td><td>BSED SS</td><td>1st</td><td>No</td><td>Daily</td><td>70.0</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P12</td><td>F</td><td>BSED SS</td><td>2nd</td><td>No</td><td>Never</td><td>72.5</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P13</td><td>F</td><td>BSED SS</td><td>2nd</td><td>No</td><td>Never</td><td>70.0</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P14</td><td>F</td><td>BSED SS</td><td>2nd</td><td>Yes</td><td>Daily</td><td>85.0</td><td><span class="sus-pill a">Excellent</span></td></tr>
+          <tr><td>P15</td><td>F</td><td>BSED SS</td><td>1st</td><td>No</td><td>Daily</td><td>75.0</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P16</td><td>F</td><td>BSED SS</td><td>1st</td><td>Yes</td><td>Daily</td><td>52.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P17</td><td>M</td><td>BSED SS</td><td>1st</td><td>Yes</td><td>Daily</td><td>72.5</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P18</td><td>F</td><td>BSED SS</td><td>1st</td><td>Yes</td><td>Daily</td><td>67.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P19</td><td>M</td><td>BSED SS</td><td>1st</td><td>Yes</td><td>Never</td><td>75.0</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P20</td><td>F</td><td>BSED SS</td><td>1st</td><td>Yes</td><td>Daily</td><td>75.0</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P21</td><td>F</td><td>BSBA FM</td><td>1st</td><td>No</td><td>Never</td><td>62.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P22</td><td>F</td><td>BSBA FM</td><td>1st</td><td>No</td><td>Never</td><td>57.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P23</td><td>F</td><td>BSBA FM</td><td>1st</td><td>No</td><td>Never</td><td>70.0</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P24</td><td>F</td><td>BSBA FM</td><td>1st</td><td>No</td><td>Never</td><td>67.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P25</td><td>M</td><td>BSA</td><td>1st</td><td>No</td><td>Daily</td><td>77.5</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P26</td><td>F</td><td>BSA</td><td>1st</td><td>No</td><td>Daily</td><td>72.5</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P27</td><td>F</td><td>BSA</td><td>1st</td><td>Yes</td><td>Daily</td><td>95.0</td><td><span class="sus-pill a">Excellent</span></td></tr>
+          <tr><td>P28</td><td>F</td><td>BSA</td><td>1st</td><td>No</td><td>Daily</td><td>72.5</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P29</td><td>F</td><td>BSA</td><td>1st</td><td>Yes</td><td>Daily</td><td>67.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P30</td><td>M</td><td>BSA</td><td>1st</td><td>Yes</td><td>Weekly</td><td>75.0</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P31</td><td>M</td><td>BSA</td><td>1st</td><td>Yes</td><td>Daily</td><td>85.0</td><td><span class="sus-pill a">Excellent</span></td></tr>
+          <tr><td>P32</td><td>F</td><td>BSA</td><td>1st</td><td>No</td><td>Daily</td><td>82.5</td><td><span class="sus-pill b">Good</span></td></tr>
+          <tr><td>P33</td><td>F</td><td>BSED SS</td><td>1st</td><td>No</td><td>Daily</td><td>90.0</td><td><span class="sus-pill a">Excellent</span></td></tr>
+          <tr><td>P34</td><td>M</td><td>BACOM</td><td>1st</td><td>Yes</td><td>Daily</td><td>42.5</td><td><span class="sus-pill d">Poor</span></td></tr>
+          <tr><td>P35</td><td>F</td><td>BACOM</td><td>1st</td><td>Yes</td><td>Weekly</td><td>62.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P36</td><td>M</td><td>BACOM</td><td>1st</td><td>No</td><td>Daily</td><td>55.0</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P37</td><td>M</td><td>BSBIO</td><td>3rd</td><td>No</td><td>Daily</td><td>57.5</td><td><span class="sus-pill c">OK</span></td></tr>
+          <tr><td>P38</td><td>F</td><td>BSBIO</td><td>3rd</td><td>Yes</td><td>Daily</td><td>—</td><td>—</td></tr>
+          <tr><td>P39</td><td>M</td><td>BACOM</td><td>1st</td><td>—</td><td>Daily</td><td>50.0</td><td><span class="sus-pill d">Poor</span></td></tr>
+          <tr><td>P40</td><td>F</td><td>BACOM</td><td>1st</td><td>Yes</td><td>Daily</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.78rem;color:rgba(255,255,255,0.35);margin-top:10px;">— denotes missing or incomplete response data. 4 participants had incomplete SUS entries and are excluded from score calculations.</p>
+  </section>
+
+  <!-- ══ 8. FEEDBACK ══ -->
+  <section class="page-section" id="feedback">
+    <h2 class="section-heading">Feedback and Suggestions from Participants</h2>
+    <p class="section-text">
+      Feedback was gathered through the SUS questionnaire responses and direct observations during moderated testing sessions. The following themes emerged from the data.
+    </p>
+    <div class="feedback-list">
+      <div class="feedback-item">
+        <span class="feedback-icon">✅</span>
+        <p><strong style="color:#fff;">High Ease of Use</strong><br/>
+        Q3 — "I found the system easy to use" — achieved the highest average rating of 4.49 / 5, with 20 participants selecting Strongly Agree. Most users could navigate core features intuitively after brief exploration.</p>
+      </div>
+      <div class="feedback-item">
+        <span class="feedback-icon">⚠️</span>
+        <p><strong style="color:#fff;">Desire for Simpler Navigation</strong><br/>
+        Q2 — "I found the system unnecessarily complex" — averaged 2.90 with 7 participants Strongly Disagreeing but 8 Strongly Agreeing. Some users felt the multi-step shop and checkout flow added unnecessary steps.</p>
+      </div>
+      <div class="feedback-item">
+        <span class="feedback-icon">📱</span>
+        <p><strong style="color:#fff;">Perceived Integration</strong><br/>
+        Q7 — "I would imagine most people would learn quickly" — averaged 4.36 / 5. 18 participants Agreed and 18 Strongly Agreed, suggesting confidence that new users can onboard without much guidance.</p>
+      </div>
+      <div class="feedback-item">
+        <span class="feedback-icon">🔧</span>
+        <p><strong style="color:#fff;">Need for Technical Support Concern</strong><br/>
+        Q4 — "I would need technical support" — averaged 2.52, with 8 participants in the Strongly Disagree camp but 2 Strongly Agreeing. A subset of less tech-savvy users (7 who reported "Never" using tech) expressed higher need for assistance.</p>
+      </div>
+      <div class="feedback-item">
+        <span class="feedback-icon">🌐</span>
+        <p><strong style="color:#fff;">Program-Specific Variation</strong><br/>
+        BSA participants scored notably higher on average (mean ~74.5), while BACOM participants showed more variability (range 50–57.5), suggesting the portal's design may align better with students already experienced in administrative or data-heavy tasks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 9. SUMMARY ══ -->
+  <section class="page-section" id="summary">
+    <h2 class="section-heading">Summarize Usability Test</h2>
+    <div class="summary-block">
+      <p>
+        The MedCare Patient Portal usability evaluation involved <strong>40 participants</strong> from Partido State University across 8 programs (BSED, BSED Math, BSED ValEd, BSED SS, BSBA FM, BSA, BACOM, BSBIO), predominantly 1st-year students (70%) with 65% being daily technology users. The DECIDE framework guided the evaluation, employing moderated usability testing and the System Usability Scale (SUS) as primary instruments.
+        <br/><br/>
+        The portal achieved a <strong>mean SUS score of 71.5</strong> (median 72.5), which places it above the industry benchmark of 68 and in the <em>"Good"</em> usability classification. Positive-statement items (Q1, Q3, Q5, Q7, Q9) consistently scored between 4.22–4.49, reflecting that users found the system easy to use, well-integrated, and learnable. Negative-statement items (Q2, Q4, Q6, Q8, Q10) averaged between 2.38–2.95, indicating that most users did not find the system unnecessarily complex, cumbersome, or inconsistent — though moderate room for improvement exists, particularly around the complexity of the shop/checkout workflow and onboarding for first-time users with low prior tech exposure.
+      </p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <h3 style="font-size:1.05rem;margin-bottom:16px;color:#fff;font-family:'Playfair Display',serif;">Recommended Next Steps</h3>
+
+      <div class="rec-priority priority-high">
+        <span class="rec-label">🔴 High Priority — Implement Immediately</span>
+        <div class="rec-items">
+          <p><strong style="color:#fff;">Simplify Shop & Checkout Flow</strong><br/>
+          Q2 and Q10 flagged unnecessary complexity and a learning curve in the shop. Reduce checkout steps, add progress indicators, and provide clear cart management controls to lower cognitive load.</p>
+          <p><strong style="color:#fff;">Onboarding Guidance for New Users</strong><br/>
+          7 participants who reported "Never" using similar tech scored lower (avg ~60). Implement a brief guided tour or contextual tooltips triggered on first login to ease initial navigation.</p>
+        </div>
+      </div>
+
+      <div class="rec-priority priority-medium">
+        <span class="rec-label">🟡 Medium Priority — Plan for Next Release</span>
+        <div class="rec-items">
+          <p><strong style="color:#fff;">Improve Navigation Labels & Consistency</strong><br/>
+          Feedback from findings.html confirmed unclear navigation labels. Standardize terminology across all sections and ensure menu placement is predictable on both mobile and desktop.</p>
+          <p><strong style="color:#fff;">Enhance System Feedback & Confirmations</strong><br/>
+          Add success/error confirmation messages for key actions (sending messages, completing purchases, updating profile), addressing the "Lack of Feedback" finding identified during testing.</p>
+        </div>
+      </div>
+
+      <div class="rec-priority priority-low">
+        <span class="rec-label">🟢 Low Priority — Future Enhancements</span>
+        <div class="rec-items">
+          <p><strong style="color:#fff;">Expand Mobile Responsiveness</strong><br/>
+          Several elements did not scale properly on smaller screens. Conduct dedicated mobile usability testing and refine layouts for sub-400px viewports to improve readability and interaction targets.</p>
+          <p><strong style="color:#fff;">Expand Evaluation Scope</strong><br/>
+          With only 40 participants (mostly 1st–2nd year BSEd/BSA/BACOM), future rounds should include older users, healthcare staff, and non-student demographics to improve external validity of findings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end sections-wrap -->
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="MC_logo.png" alt="MedCare Logo" width="28" height="28" style="object-fit:contain;opacity:0.45;border-radius:50%;"/>
+      <span class="footer-brand">MedCare System</span>
+    </div>
+  </div>
+  <div class="footer-bottom" style="text-align:center;">
+    <p class="footer-text">Established by <span class="footer-highlight">MedCare</span> · Usability Evaluation Report</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentation – MedCare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <svg class="search-icon-overlay" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+      <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="Search topics, sections…" autocomplete="off"/>
+    <button class="search-close" id="searchClose" title="Close">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="search-results" id="searchResults">
+    <p class="search-hint">Type to search sections…</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <div class="nav-icon">
+      <img src="MC_logo.png" alt="MedCare Logo" width="30" height="30" style="object-fit:contain;border-radius:50%;"/>
+    </div>
+    <span class="nav-title">MedCare</span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="data_gathering.html" class="nav-link">Data Gathering</a></li>
+    <li><a href="task.html" class="nav-link">List of Tasks</a></li>
+    <li><a href="results.html" class="nav-link">Results</a></li>
+    <li><a href="documentation.html" class="nav-link active">Documentation</a></li>
+    <li class="nav-more-wrap">
+      <button class="nav-link nav-more-btn" id="moreBtn">
+        More
+        <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="reflect.html" class="dropdown-item">Reflections</a>
+        <a href="findings.html" class="dropdown-item">Additional Findings</a>
+        <a href="prototype.html" class="dropdown-item">Prototype Walkthrough</a>
+        <a href="videodemo.html" class="dropdown-item">Video Demonstration</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="search-btn" id="searchBtn" title="Search">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="hamburger" id="hamburger" title="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">Home</a>
+  <a href="data_gathering.html" class="mobile-link">Data Gathering</a>
+  <a href="task.html" class="mobile-link">List of Tasks</a>
+  <a href="results.html" class="mobile-link">Results</a>
+  <a href="documentation.html" class="mobile-link active">Documentation</a>
+  <div class="mobile-divider"></div>
+  <p class="mobile-section-label">More</p>
+  <a href="reflect.html" class="mobile-link">Reflections</a>
+  <a href="findings.html" class="mobile-link">Additional Findings</a>
+  <a href="prototype.html" class="mobile-link">Prototype Walkthrough</a>
+  <a href="videodemo.html" class="mobile-link">Video Demonstration</a>
+</div>
+
+<!-- HERO -->
+<div class="tasks-hero">
+  <div class="p-orb1"></div>
+  <div class="p-orb2"></div>
+  <div class="tasks-hero-content">
+    <div class="tasks-hero-badge">Usability Evaluation Report</div>
+    <h1>Project <em>Documentation</em></h1>
+    <p>A comprehensive reference covering the MedCare usability evaluation — methodology, tools, team roles, and supporting materials.</p>
+  </div>
+</div>
+
+<!-- DOCUMENTATION CONTENT -->
+<div class="tasks-content">
+
+  <!-- PROJECT OVERVIEW -->
+  <div class="task-group">
+    <div class="task-group-header">
+      <div class="task-group-icon">📋</div>
+      <div class="task-group-title">Project Overview</div>
+    </div>
+    <div class="task-group-body">
+      <p style="font-size:0.92rem;color:rgba(255,255,255,0.65);line-height:1.7;margin:0;">
+        This project is a usability evaluation of the <strong style="color:#fff;">MedCare Patient Portal</strong> — a digital health platform designed to help patients manage appointments, prescriptions, messages, and pharmacy interactions. The evaluation was conducted using the <strong style="color:#fff;">DECIDE framework</strong> to ensure structured, user-centered assessment.
+      </p>
+      <div class="task-subgroup">
+        <div class="task-subgroup-label">Key Details</div>
+        <ul class="task-items">
+          <li>Evaluation Method: Moderated Usability Testing + SUS Questionnaire</li>
+          <li>Framework: DECIDE (Determine, Explore, Choose, Identify, Decide, Evaluate)</li>
+          <li>Participants: 40 students from Partido State University across multiple programs (BSED, BSED Math, BSED ValEd, BSED SS, BSA, BSBA FM, BACOM, BSBIO)</li>
+          <li>Evaluation Period: Academic Term 2024–2025</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- OBJECTIVES -->
+  <div class="task-group">
+    <div class="task-group-header">
+      <div class="task-group-icon">🎯</div>
+      <div class="task-group-title">Objectives</div>
+    </div>
+    <div class="task-group-body">
+      <ul class="task-items">
+        <li>Assess the ease of navigation and first-glance clarity of the MedCare interface</li>
+        <li>Measure task completion rates, time-on-task, and user satisfaction scores</li>
+        <li>Identify usability pain points across core features (login, shop, messaging, profile)</li>
+        <li>Provide actionable recommendations to improve the overall user experience</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TOOLS & MATERIALS -->
+  <div class="task-group">
+    <div class="task-group-header">
+      <div class="task-group-icon">🛠️</div>
+      <div class="task-group-title">Tools &amp; Materials</div>
+    </div>
+    <div class="task-group-body">
+      <div class="task-subgroup">
+        <div class="task-subgroup-label">Evaluation Tools</div>
+        <ul class="task-items">
+          <li>Screen recording software for session capture</li>
+          <li>Think-aloud protocol for real-time verbal feedback</li>
+          <li>System Usability Scale (SUS) questionnaire</li>
+          <li>Heuristic Evaluation based on Nielsen's 10 usability heuristics</li>
+          <li>Figma for prototype design and interactive walkthrough</li>
+        </ul>
+      </div>
+      <div class="task-subgroup">
+        <div class="task-subgroup-label">Report Tools</div>
+        <ul class="task-items">
+          <li>HTML / CSS / JavaScript for this evaluation website</li>
+          <li>Google Fonts (Playfair Display &amp; Nunito)</li>
+          <li>YouTube for video demonstration hosting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE STRUCTURE -->
+  <div class="task-group">
+    <div class="task-group-header">
+      <div class="task-group-icon">🗂️</div>
+      <div class="task-group-title">Website Structure</div>
+    </div>
+    <div class="task-group-body">
+      <div class="task-subgroup">
+        <div class="task-subgroup-label">Pages</div>
+        <ul class="task-items">
+          <li><strong style="color:#fff;">Home (index.html)</strong> — Project overview and team members</li>
+          <li><strong style="color:#fff;">Data Gathering (data_gathering.html)</strong> — DECIDE framework breakdown</li>
+          <li><strong style="color:#fff;">List of Tasks (task.html)</strong> — All usability test tasks and scenarios</li>
+          <li><strong style="color:#fff;">Results (results.html)</strong> — Task results, SUS scores, and feedback</li>
+          <li><strong style="color:#fff;">Documentation (documentation.html)</strong> — This page</li>
+          <li><strong style="color:#fff;">Reflections (reflect.html)</strong> — Team insights and learnings</li>
+          <li><strong style="color:#fff;">Additional Findings (findings.html)</strong> — Supplementary usability issues</li>
+          <li><strong style="color:#fff;">Prototype Walkthrough (prototype.html)</strong> — Figma prototype &amp; video</li>
+          <li><strong style="color:#fff;">Video Demonstration (videodemo.html)</strong> — Full demo video</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SURVEY DOCUMENTATION PHOTOS -->
+  <div class="task-group">
+    <div class="task-group-header">
+      <div class="task-group-icon">📸</div>
+      <div class="task-group-title">Survey Documentation</div>
+    </div>
+    <div class="task-group-body">
+      <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);margin:0 0 20px;">Photos taken during the usability evaluation survey conducted at Partido State University.</p>
+      <!-- LIGHTBOX OVERLAY -->
+      <div id="docLightbox" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;flex-direction:column;">
+        <button onclick="closeLightbox()" style="position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;">&#x2715;</button>
+        <button onclick="prevPhoto()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.12);border:none;color:#fff;font-size:2rem;cursor:pointer;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;">&#8249;</button>
+        <img id="docLightboxImg" src="" alt="" style="max-width:90vw;max-height:85vh;object-fit:contain;border-radius:10px;box-shadow:0 8px 48px rgba(0,0,0,0.6);"/>
+        <p id="docLightboxCounter" style="color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;font-size:0.85rem;margin-top:12px;"></p>
+        <button onclick="nextPhoto()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.12);border:none;color:#fff;font-size:2rem;cursor:pointer;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;">&#8250;</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(0)"><img src="pic1.jpeg"  alt="Survey documentation 1"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(1)"><img src="pic2.jpeg"  alt="Survey documentation 2"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(2)"><img src="pic3.jpeg"  alt="Survey documentation 3"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(3)"><img src="pic4.jpeg"  alt="Survey documentation 4"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(4)"><img src="pic5.jpeg"  alt="Survey documentation 5"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(5)"><img src="pic6.jpeg"  alt="Survey documentation 6"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(6)"><img src="pic7.jpeg"  alt="Survey documentation 7"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(7)"><img src="pic8.jpeg"  alt="Survey documentation 8"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(8)"><img src="pic9.jpeg"  alt="Survey documentation 9"  style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(9)"><img src="pic10.jpeg" alt="Survey documentation 10" style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(10)"><img src="pic11.jpeg" alt="Survey documentation 11" style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(11)"><img src="pic12.jpeg" alt="Survey documentation 12" style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(12)"><img src="pic13.jpeg" alt="Survey documentation 13" style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(13)"><img src="pic14.jpeg" alt="Survey documentation 14" style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(14)"><img src="pic15.jpeg" alt="Survey documentation 15" style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);cursor:pointer;" onclick="openLightbox(15)"><img src="pic16.jpeg" alt="Survey documentation 16" style="width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      </div>
+
+      
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="MC_logo.png" alt="MedCare Logo" width="28" height="28" style="object-fit:contain;opacity:0.45;border-radius:50%;"/>
+      <span class="footer-brand">MedCare System</span>
+    </div>
+  </div>
+  <div class="footer-bottom" style="text-align:center;">
+    <p class="footer-text">Established by <span class="footer-highlight">MedCare</span> · Usability Evaluation Report</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
